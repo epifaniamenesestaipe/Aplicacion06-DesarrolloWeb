@@ -1,0 +1,8 @@
+mixin heroCard(hero)
+  .card
+    .card-body
+      h5.card-title= hero.alias
+      h6.card-subtitle.mb-2.text-muted= hero.realName
+      p.card-text habilidades: #{hero.abilities}
+      a.card-link(href='/heroes/'+hero.id) ver detalles
+  br

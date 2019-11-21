@@ -1,0 +1,27 @@
+extends ../layout
+
+
+block content
+  h5.card-title= hero.alias
+  hr
+  
+  form(action='/heroes/'+hero.id+'/edit', method='post')
+    .form-group
+      label(for='id') Codigo
+      input.form-control(type='text', name='id', value=hero.id)
+    .form-group
+      label(for='alias') Alias
+      input.form-control(type='text', name='alias', value=hero.alias)
+    .form-group
+      label(for='abilities') Habilidades
+      input.form-control(type='text', name='abilities', value=hero.abilities)
+    .form-group
+      label(for='realName') Nombre real
+      input.form-control(type='text', name='realName', value=hero.realName)
+    .form-group
+      label(for='antagonist') Antagonistal principal
+      input.form-control(type='text', name='antagonist', value=hero.antagonist)
+    div
+      a(href='/heroes/'+hero.id) regresar
+      span.p-1
+      input(type='submit', value='Guardar')

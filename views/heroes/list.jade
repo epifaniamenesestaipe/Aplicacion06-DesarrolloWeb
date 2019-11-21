@@ -1,0 +1,10 @@
+extends ../layout
+include ../mixins/hero-card
+
+block content
+  h1= title
+  p Welcome to #{title}
+  .row
+    each hero in heroes
+      .col-4
+        +heroCard(hero)

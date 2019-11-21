@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  h5.card-title= hero.alias
+  h6.card-subtitle.mb-2.text-muted= hero.realName
+  p.card-text habilidades: #{hero.abilities}
+  div
+    a(class="btn btn-info", href='/heroes/'+hero.id+'/edit') Editar
+    span.p-1
+    a(class="btn btn-danger", href='/heroes/'+hero.id+'/remove') Eliminar
